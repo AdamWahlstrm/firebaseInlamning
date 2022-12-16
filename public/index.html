@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>Movie Room</h1>
+
+        <div class="content">
+
+            <form id="add-movie-form">
+                <input type="text" name="name" placeholder="Movie Name">
+                <input type="text" name="genre" placeholder="Genre">
+                <button>Add movie</button>
+            </form>
+
+            <ul id="movie-list"></ul>
+
+        </div>
+
+
+
+        <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyBo44J56SJPdoOApwUPcTsmlLbPOTaqUok",
+              authDomain: "fir-examination.firebaseapp.com",
+              databaseURL: "https://fir-examination-default-rtdb.firebaseio.com",
+              projectId: "fir-examination",
+              storageBucket: "fir-examination.appspot.com",
+              messagingSenderId: "773210565544",
+              appId: "1:773210565544:web:bb83d046b45721c3a6cb9d",
+              measurementId: "G-0DLJ7J43QQ"
+            };
+            firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
